@@ -151,3 +151,31 @@ catalogue = [
         with st.expander("Exercice final — Mini-catalogue liste de dicts (15 min)"):
             st.write("Crée une liste de 3 dicts produits Testoon avec 4 attributs chacun. Affiche le SKU du 2e et la famille du 3e.")
             codef = st.text_area("Colle ton code ici :", key="efj1", height=150)
+            if st.button("Soumettre exercice final"):
+                if codef:
+                    st.success("Parfait ! Tu viens de créer la structure exacte d'un export JSON Akeneo.")
+                else:
+                    st.error("Tape d'abord ton code dans Jupyter.")
+
+        st.divider()
+        if st.button("Journée J1 complétée ✓", type="primary"):
+            st.session_state.progression["S1"]["J1"] = True
+            st.success("Bravo ! Journée 1 validée. Reviens demain pour J2.")
+            st.rerun()
+
+    elif jour_choisi == "J2":
+        st.info("Contenu Mardi en cours de construction. Reviens demain !")
+    elif jour_choisi == "J3":
+        st.info("Contenu Mercredi en cours de construction.")
+    elif jour_choisi == "J4":
+        st.info("Contenu Jeudi en cours de construction.")
+    elif jour_choisi == "J5":
+        st.info("Contenu Vendredi en cours de construction.")
+
+else:
+    st.info(f"Contenu {semaine_choisie} en cours de construction. Complète la semaine 1 d'abord.")
+
+st.divider()
+st.markdown("### Mes notes")
+st.text_area("Ajoute tes notes ici :", height=150,
+             placeholder="Ex: bien retenir que l'index commence à 0...")
