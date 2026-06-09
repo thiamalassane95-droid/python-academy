@@ -16,4 +16,4 @@ Python · Streamlit · pandas · json
 
 ## Démo en ligne
 
-[Voir l'application](VOTRE_URL_STREAMLIT)
+https://python-academy-ykavc9wh3qenglleosxck2.streamlit.app/
